@@ -1,0 +1,1 @@
+# CHANGELOG\n\n## [1.3.0] - Produção\n- Minificação e documentação

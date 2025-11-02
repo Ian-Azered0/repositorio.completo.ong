@@ -1,0 +1,1 @@
+# Acessibilidade\n\nWCAG 2.1 AA aplicado.

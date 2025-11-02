@@ -1,0 +1,1 @@
+# ONG Uma Esperança para o Futuro — Entrega Final (Produção)\n\nVersão final otimizada e acessível do projeto.

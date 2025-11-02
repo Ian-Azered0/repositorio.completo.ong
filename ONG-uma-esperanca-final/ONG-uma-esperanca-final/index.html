@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ONG Uma Esperança para o Futuro - versão final otimizada">
+  <title>ONG Uma Esperança para o Futuro</title>
+  <link rel="stylesheet" href="css/design-system.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/responsive.min.css">
+</head>
+<body class="theme-dark" data-contrast="normal">
+  <div class="top-controls" style="position:fixed;right:12px;top:12px;z-index:1000;">
+    <button id="contrastToggle" aria-pressed="false" title="Ativar Alto Contraste">Alto Contraste</button>
+    <button id="themeToggle" aria-pressed="false" title="Alternar Tema">Tema</button>
+  </div>
+  <div id="app">
+    <header class="site-header" role="banner">
+      <div class="container header-grid">
+        <a class="logo" href="#/" data-link aria-label="Ir para o início"><img src="images/logo.svg" alt="Logo"></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu">☰</button>
+        <nav class="main-nav" role="navigation" aria-label="Menu principal">
+          <ul id="mainMenu" class="menu" role="menubar">
+            <li role="none"><a role="menuitem" href="#/" data-link>Início</a></li>
+            <li role="none" class="dropdown">
+              <a role="menuitem" href="#/projetos" data-link>Projetos ▾</a>
+              <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="none"><a role="menuitem" href="#/projetos#educacao" data-link>Educação</a></li>
+                <li role="none"><a role="menuitem" href="#/projetos#saude" data-link>Saúde</a></li>
+              </ul>
+            </li>
+            <li role="none"><a role="menuitem" href="#/cadastro" data-link>Cadastro</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="view" class="container" role="main" tabindex="-1"></main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <p>&copy; <span id="year"></span> ONG Uma Esperança para o Futuro</p>
+        </div>
+        <div class="footer-col">
+          <a href="docs/ACESSIBILIDADE.md">Relatório de Acessibilidade</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" aria-live="polite" class="toast" hidden></div>
+
+  <script src="js/masks.min.js" defer></script>
+  <script src="js/valida.min.js" defer></script>
+  <script src="js/main_spa.min.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      var cbtn=document.getElementById('contrastToggle');var tbtn=document.getElementById('themeToggle');
+      cbtn.addEventListener('click',function(){var body=document.body;var isOn=body.classList.toggle('alto-contraste');document.body.setAttribute('data-contrast',isOn?'high':'normal');cbtn.setAttribute('aria-pressed',String(isOn));});
+      tbtn.addEventListener('click',function(){document.body.classList.toggle('theme-light');tbtn.setAttribute('aria-pressed',String(document.body.classList.contains('theme-light')));});
+    });
+  </script>
+</body>
+</html>
